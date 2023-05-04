@@ -1,0 +1,13 @@
+---
+version: "3.8"
+services:
+  frontend:
+    container_name: angular-docker
+    build:
+      context: ./
+      dockerfile: dev.Dockerfile
+    ports:
+      - "4200:80"
+    volumes:
+      - .:/usr/src/app
+
